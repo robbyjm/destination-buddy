@@ -9,7 +9,10 @@ sap.ui.define([
 		formatter: formatter,
 
 		onInit: function () {
-
+			const oView = this.getView();
+			const oModel = this.getOwnerComponent().getModel()
+			const oCodeEditor = oView.byId('codeEditor')
+			oCodeEditor.setValue(oModel.getJSON())
 		}
 	});
 });

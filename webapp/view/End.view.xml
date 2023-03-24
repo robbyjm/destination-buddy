@@ -6,11 +6,10 @@
   controllerName="sap.ui.demo.basicTemplate.controller.End"
 >
   <Page title="Who am I..?">
-    <ce:CodeEditor
+    <ce:CodeEditor id="codeEditor"
       type="json"
 	colorTheme="clouds"
 	editable="false"
-      value="{/}"
     />
   </Page>
 </mvc:View>

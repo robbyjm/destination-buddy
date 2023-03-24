@@ -1,5 +1,33 @@
 {
-  "devDependencies": {
-    "mbt": "^1.2.23"
-  }
+    "name": "openui5-basic-template-app",
+    "version": "0.1.0",
+    "description": "Best-practice starting point for building a freestyle app",
+    "private": true,
+    "scripts": {
+        "start": "ui5 serve -o /index.html",
+        "test": "npm run lint && rimraf coverage && npm run karma-ci",
+        "build": "rimraf dist && ui5 build --a",
+        "wdi5": "wdio run ./wdio.conf.js",
+        "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
+        "predeploy": "rimraf resources mta_archives && mbt build",
+        "deploy": "fiori cfDeploy",
+        "undeploy": "cf undeploy sapuidemobasicTemplate --delete-services --delete-service-keys --delete-service-brokers"
+    },
+    "devDependencies": {
+        "@sap/generator-fiori": "^1.9.2",
+        "@sap/ui5-builder-webide-extension": "^1.1.8",
+        "@sap/ux-ui5-tooling": "^1.9.2",
+        "@ui5/cli": "x",
+        "mbt": "^1.2.18",
+        "ui5-middleware-livereload": "^0.8.1",
+        "ui5-task-zipper": "^0.5.0"
+    },
+    "ui5": {
+        "dependencies": [
+            "ui5-middleware-livereload",
+            "@sap/ui5-builder-webide-extension",
+            "ui5-task-zipper",
+            "mbt"
+        ]
+    }
 }
