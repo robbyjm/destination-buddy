@@ -1,0 +1,24 @@
+<mvc:View
+	controllerName="sap.ui.demo.basicTemplate.controller.Home"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		id="page"
+		title="{i18n>title}">
+		<content>
+			<f:FlexibleColumnLayout layout="ThreeColumnsMidExpanded">
+				<f:beginColumnPages>
+
+				</f:beginColumnPages>
+				<f:midColumnPages>
+
+				</f:midColumnPages>
+				<f:endColumnPages>
+					<mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.End"></mvc:XMLView>
+				</f:endColumnPages>
+			</f:FlexibleColumnLayout>
+		</content>
+	</Page>
+</mvc:View>

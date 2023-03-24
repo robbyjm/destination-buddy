@@ -1,0 +1,91 @@
+_schema-version: "3.1"
+ID: destination-buddy
+version: 1.0.0
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+# build-parameters:
+#     - builder: custom
+#       commands:
+#         - npx -p @sap/cds-dk cds build --production
+modules:
+
+  # DESTINATION CONTENT DEPLOYER
+  - name: destination-deployer
+    type: com.sap.application.content
+    requires:
+      - name: destination-buddy-auth
+      - name: destination-buddy-html-repo
+      - name: destination-buddy-destination
+        parameters:
+          content-target: true
+    parameters:
+      content:
+        instance:
+          destinations:
+            - Name: html-repo
+              ServiceInstanceName: destination-buddy-html-repo
+              ServiceKeyName: destination-buddy-html-repo-key
+              sap.cloud.service: replace.me
+            - Name: xsuaa
+              Authentication: OAuth2UserTokenExchange
+              ServiceInstanceName: destination-buddy-auth
+              ServiceKeyName: destination-buddy-auth-key
+              sap.cloud.service: replace.me
+          existing_destinations_policy: update
+    build-parameters:
+      no-source: true
+  # HTML CONTENT DEPLOYER
+  - name: html-deployer
+    type: com.sap.application.content
+    path: .
+    requires:
+      - name: destination-buddy-html-repo
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+        - artifacts:
+            - HTML5Module-content.zip
+          name: HTML5Module
+          target-path: resources/
+  #HTML5 MODULE
+  - name: HTML5Module
+    type: html5
+    path: app
+    build-parameters:
+      builder: custom
+      commands:
+        - npm run build
+      supported-platforms: []
+
+resources:
+  # XSUAA SERVICE
+  - name: destination-buddy-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      service-keys:
+        - name: destination-buddy-auth-key
+      path: ./xs-security.json
+      config:
+        xsappname: destination-buddy
+        tenant-mode: dedicated
+  # HTML REPO SERVICE
+  - name: destination-buddy-html-repo
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-host
+      service-keys:
+        - name: destination-buddy-html-repo-key
+  # DESTINATION SERVICE
+  - name: destination-buddy-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
+      config:
+        HTML5Runtime_enabled: 'true'
