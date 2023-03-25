@@ -9,7 +9,6 @@
     <ce:CodeEditor id="code"
       type="json"
 	colorTheme="clouds"
-	editable="false""
-    />
+	editable="false" />
   </Page>
 </mvc:View>
