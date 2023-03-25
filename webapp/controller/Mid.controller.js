@@ -4,15 +4,12 @@ sap.ui.define([
 ], function(Controller, formatter) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.basicTemplate.controller.Begin", {
+	return Controller.extend("sap.ui.demo.basicTemplate.controller.Mid", {
 
 		formatter: formatter,
 
 		onInit: function () {
 
-		},
-		onDestinationPress: function (oEvent) {
-			oEvent.getBindingContext().getObject()
 		}
 	});
 });

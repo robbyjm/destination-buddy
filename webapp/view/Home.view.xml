@@ -13,7 +13,7 @@
 					<mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Begin"></mvc:XMLView>
 				</f:beginColumnPages>
 				<f:midColumnPages>
-
+					<mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Mid"></mvc:XMLView>
 				</f:midColumnPages>
 				<f:endColumnPages>
 					<mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.End"></mvc:XMLView>

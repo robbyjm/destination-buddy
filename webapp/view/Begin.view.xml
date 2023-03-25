@@ -5,9 +5,9 @@
   xmlns:ce="sap.ui.codeeditor"
   controllerName="sap.ui.demo.basicTemplate.controller.End"
 >
-  <Page title="Who am I..?">
+  <Page title="All Destinations">
     <List items="{buddy>/}" headerText="Subaccount Destinations">
-      <ObjectListItem 
+      <ObjectListItem press='onDestinationPress'
       title="{buddy>Name}" number="{buddy>ProxyType}">
       <firstStatus>
         <ObjectStatus text="{buddy>Authentication}" state="{

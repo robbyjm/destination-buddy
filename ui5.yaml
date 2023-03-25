@@ -12,3 +12,8 @@ server:
       extraExts: "xml,json,properties"
       port: 35729
       watchPath: webapp
+
+builder:
+  bundles:
+    - bundleDefinition:
+        name: "sap-ui-custom.js"

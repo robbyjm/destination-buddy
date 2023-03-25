@@ -1,0 +1,29 @@
+<mvc:View
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:ce="sap.ui.codeeditor"
+  xmlns:l="sap.ui.layout.form"
+  controllerName="sap.ui.demo.basicTemplate.controller.Mid"
+>
+  <Page title="Selected Destination">
+  <headerContent>
+    <Title text='something' />
+  </headerContent>
+  <subHeader>
+    <OverflowToolbar>
+      <ObjectHeader title='http://swaw91gateway.com'></ObjectHeader>
+    </OverflowToolbar>
+  </subHeader>
+    <VBox>
+    		<ObjectStatus
+			class="sapMObjectStatusLarge"
+			title="Ready for Business Application Studio Usage"
+			text="Success"
+			state="Success"
+			icon="sap-icon://sys-enter-2" />
+    </VBox>
+    <footer></footer>
+  </Page>
+</mvc:View>
+ 
