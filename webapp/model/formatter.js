@@ -10,6 +10,9 @@ sap.ui.define([], function () {
 				default:
 					return 'Information'
 			}
+		},
+		code: function(oCode) {
+			return JSON.stringify(oCode)
 		}
 	};
 });

@@ -9,6 +9,11 @@
     <ce:CodeEditor id="code"
       type="json"
 	colorTheme="clouds"
-	editable="false" />
+	editable="false" 
+  value="{
+    path: '/',
+    formatter: '.formatter.code'
+  }"
+  />
   </Page>
 </mvc:View>
