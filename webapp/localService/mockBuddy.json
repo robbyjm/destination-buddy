@@ -1,0 +1,56 @@
+[
+    {
+        "Name": "robby",
+        "Type": "HTTP",
+        "URL": "http://robby:9999",
+        "Authentication": "NoAuthentication",
+        "ProxyType": "OnPremise"
+    },
+    {
+        "Name": "northwind",
+        "Type": "HTTP",
+        "URL": "https://services.odata.org",
+        "Authentication": "Oauth2ClientCredentials",
+        "ProxyType": "Internet",
+        "HTML5.DynamicDestination": "true",
+        "Description": "Northwind OData services",
+        "WebIDEEnabled": "true"
+    },
+    {
+        "Name": "sandbox",
+        "Type": "HTTP",
+        "URL": "https://deploy-service.cfapps.eu10.hana.ondemand.com/slprot/aedbd6ad-0f5a-4ffc-bb2b-a4d808140ad5/slp",
+        "Authentication": "BasicAuthentication",
+        "ProxyType": "Internet",
+        "User": "robby.manis@sap.com",
+        "Description": "sandbox subaccount used for tms",
+        "Password": "something"
+    },
+    {
+        "Name": "coena",
+        "Type": "HTTP",
+        "URL": "https://deploy-service.cfapps.eu10.hana.ondemand.com/slprot/217099da-eae1-4087-9b84-b449906c57cc/slp",
+        "Authentication": "BasicAuthentication",
+        "ProxyType": "Internet",
+        "User": "robby.manis@sap.com",
+        "Description": "CoE NA subaccount used for tms",
+        "Password": "something"
+    },
+    {
+        "Name": "RefAppsBackend",
+        "Type": "HTTP",
+        "URL": "https://sapes5.sapdevcenter.com/",
+        "Authentication": "BasicAuthentication",
+        "ProxyType": "Internet",
+        "HTML5.DynamicDestination": "true",
+        "User": "I537993",
+        "TrustAll": "true",
+        "Description": "RefAppsBackendsampleShop",
+        "HTML5.Timeout": "6000",
+        "WebIDEEnabled": "true",
+        "sap-client": "002",
+        "WebIDESystem": "RefAppsBackend",
+        "Password": "something",
+        "WebIDEUsage": "dev_abap,ui5_execute_abap,dev_abap,odata_gen"
+    }
+]

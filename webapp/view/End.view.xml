@@ -5,7 +5,7 @@
   xmlns:ce="sap.ui.codeeditor"
   controllerName="sap.ui.demo.basicTemplate.controller.End"
 >
-  <Page title="Who am I..?">
+  <Page title="Who am I..?" id="editorPage">
     <ce:CodeEditor id="codeEditor"
       type="json"
 	colorTheme="clouds"

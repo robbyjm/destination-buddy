@@ -1,0 +1,21 @@
+<mvc:View
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:ce="sap.ui.codeeditor"
+  controllerName="sap.ui.demo.basicTemplate.controller.End"
+>
+  <Page title="Who am I..?">
+    <List items="{buddy>/}" headerText="Subaccount Destinations">
+      <ObjectListItem 
+      title="{buddy>Name}" number="{buddy>ProxyType}">
+      <firstStatus>
+        <ObjectStatus text="{buddy>Authentication}" state="{
+          path: 'buddy>Authentication',
+          formatter: '.formatter.color'
+        }"></ObjectStatus>
+      </firstStatus>
+    </ObjectListItem>
+    </List>
+  </Page>
+</mvc:View>

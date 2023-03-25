@@ -10,7 +10,7 @@
 		<content>
 			<f:FlexibleColumnLayout layout="ThreeColumnsMidExpanded">
 				<f:beginColumnPages>
-
+					<mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Begin"></mvc:XMLView>
 				</f:beginColumnPages>
 				<f:midColumnPages>
 

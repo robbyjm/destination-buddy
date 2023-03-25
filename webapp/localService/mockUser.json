@@ -1,0 +1,18 @@
+{
+    "firstname": "Robby",
+    "lastname": "Manis",
+    "email": "robby.manis@sap.com",
+    "name": "robby.manis@sap.com",
+    "scopes": [
+        "openid"
+    ],
+    "sub": [
+        "I537993"
+    ],
+    "sid": [
+        "S-SP-ebf1cbf0-4fed-42dd-b3dd-ecdd59b70956"
+    ],
+    "scim_id": [
+        "49192373-ac23-4496-9996-071c24987fed"
+    ]
+}

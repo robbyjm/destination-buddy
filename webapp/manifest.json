@@ -13,7 +13,11 @@
         },
         "dataSources": {
             "user": {
-                "uri": "user-api/attributes",
+                "uri": "/localService/mockUser.json",
+                "type": "JSON"
+            },
+            "buddy": {
+                "uri": "/localService/mockBuddy.json",
                 "type": "JSON"
             }
         },
@@ -87,6 +91,10 @@
             "": {
                 "type": "sap.ui.model.json.JSONModel",
                 "dataSource": "user"
+            },
+            "buddy": {
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "buddy"
             }
         },
         "resources": {
@@ -98,7 +106,7 @@
         },
         "routing": {
             "config": {
-                "routerClass": "sap.m.routing.Router",
+                "routerClass": "sap.f.routing.Router",
                 "viewType": "XML",
                 "viewPath": "sap.ui.demo.basicTemplate.view",
                 "controlId": "app",
