@@ -5,11 +5,11 @@
   xmlns:ce="sap.ui.codeeditor"
   controllerName="sap.ui.demo.basicTemplate.controller.End"
 >
-  <Page title="Who am I..?" id="editorPage">
-    <ce:CodeEditor id="codeEditor"
+  <Page title="Who am I..?" >
+    <ce:CodeEditor id="code"
       type="json"
 	colorTheme="clouds"
-	editable="false"
+	editable="false""
     />
   </Page>
 </mvc:View>
