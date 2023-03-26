@@ -2,12 +2,11 @@
   displayBlock="true"
   xmlns="sap.m"
   xmlns:mvc="sap.ui.core.mvc"
-  xmlns:ce="sap.ui.codeeditor"
-  controllerName="sap.ui.demo.basicTemplate.controller.End"
+  controllerName="sap.ui.demo.basicTemplate.controller.Begin"
 >
-  <Page title="All Destinations">
-    <List items="{buddy>/}" headerText="Subaccount Destinations">
-      <ObjectListItem press='onDestinationPress'
+  <Page showHeader='false'>
+    <List items="{buddy>/}" includeItemInSelection="true" mode="SingleSelect" selectionChange="onDestinationPress" headerText="Subaccount Destinations">
+      <ObjectListItem
       title="{buddy>Name}" number="{buddy>ProxyType}">
       <firstStatus>
         <ObjectStatus text="{buddy>Authentication}" state="{

@@ -14,11 +14,14 @@
         "undeploy": "cf undeploy sapuidemobasicTemplate --delete-services --delete-service-keys --delete-service-brokers"
     },
     "devDependencies": {
+        "@prettier/plugin-xml": "^2.2.0",
         "@sap/generator-fiori": "^1.9.2",
         "@sap/ui5-builder-webide-extension": "^1.1.8",
         "@sap/ux-ui5-tooling": "^1.9.2",
         "@ui5/cli": "x",
+        "eslint": "^8.36.0",
         "mbt": "^1.2.18",
+        "prettier": "^2.8.7",
         "ui5-middleware-livereload": "^0.8.1",
         "ui5-task-zipper": "^0.5.0"
     },

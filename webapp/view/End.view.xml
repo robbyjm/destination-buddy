@@ -6,6 +6,8 @@
   controllerName="sap.ui.demo.basicTemplate.controller.End"
 >
   <Page title="Who am I..?" >
+    <headerContent>
+    <Button press='onPress' icon="sap-icon://copy"></Button></headerContent>
     <ce:CodeEditor id="code"
       type="json"
 	colorTheme="clouds"

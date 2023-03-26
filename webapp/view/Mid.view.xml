@@ -6,15 +6,8 @@
   xmlns:l="sap.ui.layout.form"
   controllerName="sap.ui.demo.basicTemplate.controller.Mid"
 >
-  <Page title="Selected Destination">
-  <headerContent>
-    <Title text='something' />
-  </headerContent>
-  <subHeader>
-    <OverflowToolbar>
-      <ObjectHeader title='http://swaw91gateway.com'></ObjectHeader>
-    </OverflowToolbar>
-  </subHeader>
+  <Page showHeader='false'>
+    <HeaderContainer><ObjectHeader backgroundDesign='translucent' title='title' condensed='false'></ObjectHeader></HeaderContainer>
     <VBox>
     		<ObjectStatus
 			class="sapMObjectStatusLarge"

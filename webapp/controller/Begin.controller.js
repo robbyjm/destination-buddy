@@ -9,10 +9,10 @@ sap.ui.define([
 		formatter: formatter,
 
 		onInit: function () {
-
 		},
 		onDestinationPress: function (oEvent) {
-			oEvent.getBindingContext().getObject()
+			let oBinding = oEvent.getParameters().listItem.getBindingContext('buddy').getObject()
+			//oEvent.getBindingContext().getObject()
 		}
 	});
 });
