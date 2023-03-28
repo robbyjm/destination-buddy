@@ -7,16 +7,34 @@
   controllerName="sap.ui.demo.basicTemplate.controller.Mid"
 >
   <Page showHeader='false'>
-    <HeaderContainer><ObjectHeader backgroundDesign='translucent' title='title' condensed='false'></ObjectHeader></HeaderContainer>
-    <VBox>
-    		<ObjectStatus
-			class="sapMObjectStatusLarge"
-			title="Ready for Business Application Studio Usage"
-			text="Success"
-			state="Success"
-			icon="sap-icon://sys-enter-2" />
-    </VBox>
-    <footer></footer>
+    <HeaderContainer>
+      <ObjectHeader
+        backgroundDesign='translucent'
+        title='title'
+        condensed='false'
+      />
+      <Input id='input' />
+      <Button press='onSubmit' />
+    </HeaderContainer>
+    <ce:CodeEditor id="code" type="json" colorTheme="clouds" editable="false" height="200px"/>
+    <Table>
+      <columns>
+        <Column width='85%'>
+          <Text text="text" />
+        </Column>
+        <Column>
+          <Text text="text" />
+        </Column>
+      </columns>
+      <items>
+        <ColumnListItem>
+          <cells>
+            <ObjectIdentifier text="something" />
+            <ObjectNumber number="something" />
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
+    <footer />
   </Page>
 </mvc:View>
- 

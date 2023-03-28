@@ -5,17 +5,20 @@
   xmlns:ce="sap.ui.codeeditor"
   controllerName="sap.ui.demo.basicTemplate.controller.End"
 >
-  <Page title="Who am I..?" >
+  <Page title="Who am I..?">
     <headerContent>
-    <Button press='onPress' icon="sap-icon://copy"></Button></headerContent>
-    <ce:CodeEditor id="code"
+      <Button press='onPress' icon="sap-icon://copy" />
+    </headerContent>
+    <ce:CodeEditor
+      id="code"
+      liveChange="prettyPrint"
       type="json"
-	colorTheme="clouds"
-	editable="false" 
-  value="{
+      colorTheme="clouds"
+      editable="false"
+      value="{
     path: '/',
     formatter: '.formatter.code'
   }"
-  />
+    />
   </Page>
 </mvc:View>

@@ -1,24 +1,30 @@
 <mvc:View
-	controllerName="sap.ui.demo.basicTemplate.controller.Home"
-	displayBlock="true"
-	xmlns="sap.m"
-	xmlns:f="sap.f"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Page
-		id="page"
-		title="{i18n>title}">
-		<content>
-			<f:FlexibleColumnLayout layout="ThreeColumnsMidExpanded">
-				<f:beginColumnPages>
-					<mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Begin"></mvc:XMLView>
-				</f:beginColumnPages>
-				<f:midColumnPages>
-					<mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Mid"></mvc:XMLView>
-				</f:midColumnPages>
-				<f:endColumnPages>
-					<mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.End"></mvc:XMLView>
-				</f:endColumnPages>
-			</f:FlexibleColumnLayout>
-		</content>
-	</Page>
+  controllerName="sap.ui.demo.basicTemplate.controller.Home"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:f="sap.f"
+  xmlns:mvc="sap.ui.core.mvc"
+>
+  <Page id="page" title="{i18n>title}">
+    <content>
+      <f:FlexibleColumnLayout layout="ThreeColumnsMidExpanded">
+        <f:beginColumnPages>
+          <mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Begin" />
+        </f:beginColumnPages>
+        <f:midColumnPages>
+          <mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Mid" />
+        </f:midColumnPages>
+        <f:endColumnPages>
+          <mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.End" />
+        </f:endColumnPages>
+      </f:FlexibleColumnLayout>
+    </content>
+    <footer>
+      <Bar>
+        <contentRight>
+          <Button type='Ghost' icon="sap-icon://email" text="I need help" />
+        </contentRight>
+      </Bar>
+    </footer>
+  </Page>
 </mvc:View>

@@ -5,7 +5,7 @@
   controllerName="sap.ui.demo.basicTemplate.controller.Begin"
 >
   <Page showHeader='false'>
-    <List items="{buddy>/}" includeItemInSelection="true" mode="SingleSelect" selectionChange="onDestinationPress" headerText="Subaccount Destinations">
+    <List items="{buddy>/}" id="destinationList" includeItemInSelection="true" mode="SingleSelect" selectionChange="onDestinationPress" headerText="Subaccount Destinations">
       <ObjectListItem
       title="{buddy>Name}" number="{buddy>ProxyType}">
       <firstStatus>
